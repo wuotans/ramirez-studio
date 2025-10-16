@@ -1,0 +1,937 @@
+/* ===== ANIMAÇÕES AVANÇADAS ===== */
+
+/* Fade In Up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+}
+
+/* Fade In Down */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+}
+
+/* Fade In Left */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-40px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInLeft {
+    animation-name: fadeInLeft;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+}
+
+/* Fade In Right */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(40px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInRight {
+    animation-name: fadeInRight;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+}
+
+/* Bounce In */
+@keyframes bounceIn {
+    from, 20%, 40%, 60%, 80%, to {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.bounceIn {
+    animation-name: bounceIn;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+}
+
+/* Pulse */
+@keyframes pulse {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Floating Animation */
+@keyframes floating {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0, -15px, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* Zoom In */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.zoomIn {
+    animation-name: zoomIn;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+}
+
+/* Slide In Up */
+@keyframes slideInUp {
+    from {
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+.slideInUp {
+    animation-name: slideInUp;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+}
+
+/* Text Reveal */
+@keyframes textReveal {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.text-reveal {
+    animation: textReveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* Glow Effect */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+    }
+}
+
+.glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* Shake */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Rotate */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate 2s linear infinite;
+}
+
+/* Bounce */
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transform: translate3d(0,0,0);
+    }
+    40%, 43% {
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transform: translate3d(0, -15px, 0);
+    }
+    70% {
+        animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transform: translate3d(0, -7px, 0);
+    }
+    90% {
+        transform: translate3d(0,-2px,0);
+    }
+}
+
+.bounce {
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Flip In X */
+@keyframes flipInX {
+    from {
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    40% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        animation-timing-function: ease-in;
+    }
+    60% {
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+    80% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+    to {
+        transform: perspective(400px);
+    }
+}
+
+.flipInX {
+    animation-name: flipInX;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Light Speed In */
+@keyframes lightSpeedIn {
+    from {
+        transform: translate3d(100%, 0, 0) skewX(-30deg);
+        opacity: 0;
+    }
+    60% {
+        transform: skewX(20deg);
+        opacity: 1;
+    }
+    80% {
+        transform: skewX(-5deg);
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.lightSpeedIn {
+    animation-name: lightSpeedIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Roll In */
+@keyframes rollIn {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.rollIn {
+    animation-name: rollIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Rubber Band */
+@keyframes rubberBand {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.rubberBand {
+    animation-name: rubberBand;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Swing */
+@keyframes swing {
+    20% {
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+    40% {
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+    60% {
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+    80% {
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+    to {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+.swing {
+    animation-name: swing;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Wobble */
+@keyframes wobble {
+    from {
+        transform: none;
+    }
+    15% {
+        transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+    30% {
+        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+    45% {
+        transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+    60% {
+        transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+    75% {
+        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+    to {
+        transform: none;
+    }
+}
+
+.wobble {
+    animation-name: wobble;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Jello */
+@keyframes jello {
+    from, 11.1%, to {
+        transform: none;
+    }
+    22.2% {
+        transform: skewX(-12.5deg) skewY(-12.5deg);
+    }
+    33.3% {
+        transform: skewX(6.25deg) skewY(6.25deg);
+    }
+    44.4% {
+        transform: skewX(-3.125deg) skewY(-3.125deg);
+    }
+    55.5% {
+        transform: skewX(1.5625deg) skewY(1.5625deg);
+    }
+    66.6% {
+        transform: skewX(-0.78125deg) skewY(-0.78125deg);
+    }
+    77.7% {
+        transform: skewX(0.390625deg) skewY(0.390625deg);
+    }
+    88.8% {
+        transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+    }
+}
+
+.jello {
+    animation-name: jello;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Heart Beat */
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    }
+    14% {
+        transform: scale(1.3);
+    }
+    28% {
+        transform: scale(1);
+    }
+    42% {
+        transform: scale(1.3);
+    }
+    70% {
+        transform: scale(1);
+    }
+}
+
+.heartBeat {
+    animation-name: heartBeat;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in-out;
+}
+
+/* Hinge */
+@keyframes hinge {
+    0% {
+        transform: rotate3d(0, 0, 1, 0);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+    20%, 60% {
+        transform: rotate3d(0, 0, 1, 80deg);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+    40%, 80% {
+        transform: rotate3d(0, 0, 1, 60deg);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+        opacity: 1;
+    }
+    to {
+        transform: translate3d(0, 700px, 0);
+        opacity: 0;
+    }
+}
+
+.hinge {
+    animation-name: hinge;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+/* Flash */
+@keyframes flash {
+    from, 50%, to {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+.flash {
+    animation-name: flash;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Tada */
+@keyframes tada {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+        transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.tada {
+    animation-name: tada;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Delay classes */
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}
+
+.delay-600 {
+    animation-delay: 0.6s;
+}
+
+.delay-700 {
+    animation-delay: 0.7s;
+}
+
+.delay-800 {
+    animation-delay: 0.8s;
+}
+
+.delay-900 {
+    animation-delay: 0.9s;
+}
+
+.delay-1000 {
+    animation-delay: 1s;
+}
+
+/* Duration classes */
+.duration-500 {
+    animation-duration: 0.5s;
+}
+
+.duration-800 {
+    animation-duration: 0.8s;
+}
+
+.duration-1000 {
+    animation-duration: 1s;
+}
+
+.duration-1200 {
+    animation-duration: 1.2s;
+}
+
+.duration-1500 {
+    animation-duration: 1.5s;
+}
+
+.duration-2000 {
+    animation-duration: 2s;
+}
+
+/* Hover effects */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.hover-rotate:hover {
+    transform: rotate(5deg);
+}
+
+.hover-skew:hover {
+    transform: skewX(-5deg);
+}
+
+/* Stagger animations */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.stagger-item.animated {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Typewriter effect */
+.typewriter {
+    overflow: hidden;
+    border-right: 0.15em solid var(--primary);
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary) }
+}
+
+/* Gradient text animation */
+.gradient-text {
+    background: linear-gradient(45deg, #8b5cf6, #ec4899, #f59e0b, #10b981);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+
+/* Morphing background */
+.morphing-bg {
+    background: linear-gradient(45deg, #8b5cf6, #ec4899, #f59e0b);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+}
+
+/* Neon glow */
+.neon-glow {
+    text-shadow: 0 0 5px #8b5cf6, 0 0 10px #8b5cf6, 0 0 15px #8b5cf6, 0 0 20px #8b5cf6;
+    animation: neonPulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+    from {
+        text-shadow: 0 0 5px #8b5cf6, 0 0 10px #8b5cf6, 0 0 15px #8b5cf6, 0 0 20px #8b5cf6;
+    }
+    to {
+        text-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6, 0 0 30px #8b5cf6, 0 0 40px #8b5cf6;
+    }
+}
+
+/* Shimmer effect */
+.shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0 }
+    100% { background-position: 200% 0 }
+}
+
+/* Ripple effect */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.ripple:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Infinite scroll */
+.infinite-scroll {
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0) }
+    100% { transform: translateX(-50%) }
+}
+
+/* 3D flip */
+.flip-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.flip-3d:hover {
+    transform: rotateY(180deg);
+}
+
+/* Matrix rain effect (simplified) */
+.matrix-rain {
+    background: linear-gradient(transparent 50%, rgba(139, 92, 246, 0.1) 50%);
+    background-size: 100% 4px;
+    animation: matrixRain 0.5s linear infinite;
+}
+
+@keyframes matrixRain {
+    0% { background-position: 0 0 }
+    100% { background-position: 0 4px }
+}
+
+/* Particle explosion */
+.particle {
+    position: absolute;
+    pointer-events: none;
+    animation: particleExplosion 1s ease-out forwards;
+}
+
+@keyframes particleExplosion {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--tx), var(--ty)) scale(0);
+        opacity: 0;
+    }
+}
+
+/* Magnetic button effect */
+.magnetic-btn {
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.magnetic-btn:hover {
+    transform: scale(1.05) translate(var(--mx), var(--my));
+}
+
+/* Glass morphism */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Liquid button */
+.liquid-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.liquid-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s;
+}
+
+.liquid-btn:hover::before {
+    left: 100%;
+}
+
+/* Text stroke animation */
+.text-stroke {
+    -webkit-text-stroke: 1px var(--primary);
+    color: transparent;
+    animation: textStrokePulse 2s ease-in-out infinite;
+}
+
+@keyframes textStrokePulse {
+    0%, 100% {
+        -webkit-text-stroke: 1px var(--primary);
+    }
+    50% {
+        -webkit-text-stroke: 2px var(--primary-light);
+    }
+}
+
+/* Loading dots */
+.loading-dots::after {
+    content: '';
+    animation: loadingDots 1.5s infinite;
+}
+
+@keyframes loadingDots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60%, 100% { content: '...'; }
+}
+
+/* Hologram effect */
+.hologram {
+    background: linear-gradient(45deg, 
+        rgba(139, 92, 246, 0.8), 
+        rgba(236, 72, 153, 0.8), 
+        rgba(59, 130, 246, 0.8)
+    );
+    background-size: 400% 400%;
+    animation: hologramShift 4s ease infinite;
+    position: relative;
+}
+
+.hologram::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255,255,255,0.1) 2px,
+        rgba(255,255,255,0.1) 4px
+    );
+    animation: scanLine 2s linear infinite;
+}
+
+@keyframes hologramShift {
+    0%, 100% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+}
+
+@keyframes scanLine {
+    0% { transform: translateY(-100%) }
+    100% { transform: translateY(100%) }
+}
+
+
+
+/* ===== ANIMAÇÕES PARA SERVICE CARDS ===== */
+.service-card.flipped .service-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Transição suave para o flip */
+.service-card-inner {
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Garantir que o backface esteja escondido */
+.service-front,
+.service-back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Efeito de profundidade */
+.service-card {
+    perspective: 1000px;
+}

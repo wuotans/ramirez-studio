@@ -1,0 +1,455 @@
+/* ===== PARTICLES.JS STYLES ===== */
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Custom particle styles */
+.particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Particle container for hero section */
+.hero-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Alternative particle backgrounds */
+.particles-bg-1 {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--darker) 100%);
+}
+
+.particles-bg-2 {
+    background: var(--gradient);
+}
+
+.particles-bg-3 {
+    background: linear-gradient(45deg, #0f172a, #1e293b, #334155);
+}
+
+/* Particle overlay effects */
+.particles-overlay {
+    position: relative;
+}
+
+.particles-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Interactive particles */
+.particles-interactive {
+    cursor: pointer;
+}
+
+.particles-interactive .particles-js-canvas-el {
+    transition: opacity 0.3s ease;
+}
+
+.particles-interactive:hover .particles-js-canvas-el {
+    opacity: 0.8;
+}
+
+/* Particle sections */
+.section-particles {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-particles .particles-js-canvas-el {
+    z-index: -1;
+}
+
+/* Floating particles animation */
+@keyframes floatParticle {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(10px, -10px) rotate(90deg);
+    }
+    50% {
+        transform: translate(0, -20px) rotate(180deg);
+    }
+    75% {
+        transform: translate(-10px, -10px) rotate(270deg);
+    }
+}
+
+.particle-float {
+    animation: floatParticle 6s ease-in-out infinite;
+}
+
+/* Particle trail effect */
+.particle-trail {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--primary);
+    border-radius: 50%;
+    animation: particleTrail 2s linear infinite;
+}
+
+@keyframes particleTrail {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(100px, 100px);
+        opacity: 0;
+    }
+}
+
+/* Constellation effect */
+.constellation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(1px 1px at 20% 30%, white 100%, transparent),
+        radial-gradient(1px 1px at 40% 70%, white 100%, transparent),
+        radial-gradient(1px 1px at 60% 20%, white 100%, transparent),
+        radial-gradient(1px 1px at 80% 50%, white 100%, transparent);
+    background-size: 100% 100%;
+    animation: twinkle 4s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* Meteor shower effect */
+.meteor {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px white;
+    animation: meteor 3s linear infinite;
+}
+
+@keyframes meteor {
+    0% {
+        transform: translate(-100px, -100px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(1000px, 1000px);
+        opacity: 0;
+    }
+}
+
+/* Quantum dots effect */
+.quantum-dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.quantum-dot {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 50%;
+    animation: quantumFloat 4s ease-in-out infinite;
+}
+
+@keyframes quantumFloat {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.7;
+    }
+    25% {
+        transform: translate(20px, -10px) scale(1.2);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-10px, 15px) scale(0.8);
+        opacity: 0.5;
+    }
+    75% {
+        transform: translate(15px, 5px) scale(1.1);
+        opacity: 0.9;
+    }
+}
+
+/* Energy field */
+.energy-field {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(236, 72, 153, 0.3) 0%, transparent 50%);
+    animation: energyPulse 6s ease-in-out infinite;
+}
+
+@keyframes energyPulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.1);
+    }
+}
+
+/* Digital rain (Matrix style) */
+.digital-rain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent 95%, rgba(139, 92, 246, 0.1) 100%);
+    background-size: 100% 4px;
+    animation: digitalRain 0.5s linear infinite;
+}
+
+@keyframes digitalRain {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 4px; }
+}
+
+/* Nebula effect */
+.nebula {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.2) 0%, transparent 50%);
+    animation: nebulaDrift 20s ease-in-out infinite;
+}
+
+@keyframes nebulaDrift {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(-10px, 5px) scale(1.02);
+    }
+    50% {
+        transform: translate(5px, -5px) scale(0.98);
+    }
+    75% {
+        transform: translate(-5px, 10px) scale(1.01);
+    }
+}
+
+/* Plasma waves */
+.plasma-waves {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.2) 0%, transparent 50%);
+    animation: plasmaWave 8s ease-in-out infinite;
+}
+
+@keyframes plasmaWave {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
+}
+
+/* Cyber grid */
+.cyber-grid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 50px; }
+}
+
+/* Holographic particles */
+.holographic-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: 
+        0 0 10px var(--primary),
+        0 0 20px var(--primary),
+        0 0 30px var(--primary);
+    animation: holographicFloat 3s ease-in-out infinite;
+}
+
+@keyframes holographicFloat {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translate(20px, -15px) scale(1.3);
+        opacity: 1;
+    }
+}
+
+/* Binary code rain */
+.binary-rain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: monospace;
+    color: rgba(139, 92, 246, 0.3);
+    font-size: 14px;
+    line-height: 14px;
+    animation: binaryFall 10s linear infinite;
+}
+
+@keyframes binaryFall {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+/* Quantum entanglement */
+.quantum-entanglement {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.entangled-particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--primary);
+    border-radius: 50%;
+    animation: entangledOrbit 4s linear infinite;
+}
+
+@keyframes entangledOrbit {
+    0% {
+        transform: rotate(0deg) translateX(50px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(50px) rotate(-360deg);
+    }
+}
+
+/* Cosmic dust */
+.cosmic-dust {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.3) 100%, transparent),
+        radial-gradient(1px 1px at 30% 40%, rgba(255,255,255,0.3) 100%, transparent),
+        radial-gradient(1px 1px at 50% 60%, rgba(255,255,255,0.3) 100%, transparent),
+        radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,0.3) 100%, transparent);
+    background-size: 100% 100%;
+    animation: cosmicTwinkle 8s ease-in-out infinite;
+}
+
+@keyframes cosmicTwinkle {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+}
+
+/* Aurora borealis effect */
+.aurora {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+        rgba(139, 92, 246, 0.1),
+        rgba(236, 72, 153, 0.1),
+        rgba(59, 130, 246, 0.1),
+        rgba(16, 185, 129, 0.1)
+    );
+    background-size: 400% 400%;
+    animation: auroraShift 12s ease infinite;
+}
+
+@keyframes auroraShift {
+    0%, 100% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+}
+
+/* Particle explosion container */
+.particle-explosion {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Responsive particles */
+@media (max-width: 768px) {
+    .particles-js-canvas-el {
+        opacity: 0.7;
+    }
+    
+    .hero-particles {
+        display: block;
+    }
+}
+
+/* Performance optimizations */
+@media (prefers-reduced-motion: reduce) {
+    .particles-js-canvas-el {
+        animation: none;
+    }
+    
+    .particle-float,
+    .quantum-dot,
+    .holographic-particle {
+        animation: none;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .particles-js-canvas-el {
+        opacity: 0.8;
+    }
+}
+
+/* Dark mode particles */
+@media (prefers-color-scheme: dark) {
+    .particles-bg-1 {
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    }
+}
